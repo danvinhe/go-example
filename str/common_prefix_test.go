@@ -1,8 +1,8 @@
-package prefix
+package str
 
 import "testing"
 
-func TestCommon(t *testing.T) {
+func TestCommonPrefix(t *testing.T) {
 	type args struct {
 		list []string
 	}
@@ -54,9 +54,9 @@ func TestCommon(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			gotPrefix := Common(tt.args.list)
+			gotPrefix := CommonPrefix(tt.args.list)
 			if gotPrefix != tt.wantPrefix {
-				t.Errorf("Common() = %v, want %v", gotPrefix, tt.wantPrefix)
+				t.Errorf("CommonPrefix() = %v, want %v", gotPrefix, tt.wantPrefix)
 			}
 			t.Log(gotPrefix)
 		})

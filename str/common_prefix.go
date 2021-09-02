@@ -1,9 +1,9 @@
-package prefix
+package str
 
 import "fmt"
 
-// Common 共同前缀
-func Common(list []string) (prefix string) {
+// CommonPrefix 共同前缀
+func CommonPrefix(list []string) (prefix string) {
 	if len(list) == 0 {
 		return
 	}
